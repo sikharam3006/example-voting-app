@@ -17,11 +17,8 @@ variables:
   containerRegistry: 'susmithacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/result/Dockerfile'
   tag: '$(Build.BuildId)'
-
-  # Agent VM image name
-  pool:
-    - name: 'azureagent'
-
+pool:
+  -'azureagent'
 stages:
 - stage: Build
   displayName: Build the image
