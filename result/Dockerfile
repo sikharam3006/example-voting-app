@@ -16,6 +16,8 @@ RUN npm ci && \
  npm cache clean --force && \
  mv /usr/local/app/node_modules /node_modules
 
+ 
+
 COPY . .
 
 ENV PORT=80
